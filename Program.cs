@@ -1,5 +1,4 @@
-﻿using System;
-using CSharpDiscovery.Quest01;
+﻿using CSharpDiscovery.Quest01;
 
 namespace TestCSharp
 {
@@ -7,8 +6,8 @@ namespace TestCSharp
     {
         static void Main(string[] str)
         {
-            string[] table = { "hello", "world" };
-            Console.WriteLine(ConcatEverything_Exercice.ConcatEverything(table));
+            Console.WriteLine(ContainsSpecificSubstring_Exercice.ContainsSpecificSubstring("helloworld", "hello"));
+            Console.WriteLine(ContainsSpecificSubstring_Exercice.ContainsSpecificSubstring("helloworld", "monde"));
         }
     }
 }
