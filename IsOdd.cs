@@ -5,7 +5,7 @@
         public static bool IsOdd(int a)
         {
             {
-                if (a / 2 == 1)
+                if (a % 2 == 0)
                 {
                     return true;
                 }
