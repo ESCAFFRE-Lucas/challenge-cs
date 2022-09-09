@@ -1,4 +1,5 @@
-﻿using CSharpDiscovery.Quest01;
+﻿using System;
+using CSharpDiscovery.Quest01;
 
 namespace TestCSharp
 {
