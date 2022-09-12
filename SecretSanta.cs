@@ -22,11 +22,13 @@ namespace CSharpDiscovery.Quest02
       for (int i = 0; i < people.Count; i++)
       {
         string person = people.ElementAt(i);
-        int indexOfPerson = rnd.Next(0, people.Count);
+		string person2 = people.ElementAt(rnd.Next(0, people.Count));
+	
+		while (person  == person2) person2 = people.ElementAt(rnd.Next(0, people.Count));
 
         if (dic.ContainsKey(person) == false)
         {
-          dic.Add(person, people.ElementAt(indexOfPerson));
+          dic.Add(person, person2);
         }
       }
       return dic;
