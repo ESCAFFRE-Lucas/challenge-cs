@@ -15,14 +15,14 @@ namespace CSharpDiscovery.Quest02
             for (int i = 0; i <= people.Count + 1; i++)
             {
                 int randomNumber = rand.Next(0, people.Count);
-                int randomNumber2 = rand.Next(0, people.Count);
+                int randomNumber3 = rand.Next(0, people.Count);
 
-                while (randomNumber == randomNumber2)
+                while (randomNumber == randomNumber3)
                 {
-                    randomNumber2 = rand.Next(0, people.Count);
+                    randomNumber3 = rand.Next(0, people.Count);
                 }
                 var person1 = people.ElementAt(randomNumber);
-                var person2 = people.ElementAt(randomNumber2);
+                var person2 = people.ElementAt(randomNumber3);
                 people.Remove(person1);
                 people.Remove(person2);
                 dic.Add(person1, person2);
