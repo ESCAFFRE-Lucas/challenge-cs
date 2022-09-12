@@ -12,12 +12,12 @@ namespace CSharpDiscovery.Quest02
             Dictionary<string, string> dic = new Dictionary<string, string>();
             var rand = new Random();
 
-            for (int i = 0; i <= people.Count; i++)
+            for (int i = 0; i <= people.Count + 1; i++)
             {
                 int randomNumber = rand.Next(0, people.Count);
                 int randomNumber2 = rand.Next(0, people.Count);
 
-                while (randomNumber == randomNumber2)
+                if (randomNumber == randomNumber2)
                 {
                     randomNumber2 = rand.Next(people.Count);
                 }
