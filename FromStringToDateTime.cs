@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Globalization;
+    
 namespace CSharpDiscovery.Quest02
 {
     public class FromStringToDateTime_Exercice
     {
         public static DateTime FromStringToDateTime(string dateStr)
         {
-            return Convert.ToDateTime(dateStr);
+            var cultureInfo = new CultureInfo("de-DE");
+            return Convert.ToDateTime(dateStr, cultureInfo);
         }
     }
 }
