@@ -17,10 +17,22 @@ namespace CSharpDiscovery.Quest02
                 int randomNumber = rand.Next(0, people.Count);
                 int randomNumber2 = rand.Next(0, people.Count);
 
-                if (randomNumber == randomNumber2)
+                if (randomNumber == randomNumber2 && people.Count != 2)
                 {
-                    randomNumber2 = rand.Next(people.Count);
+                    randomNumber2 = rand.Next(0, people.Count);
                 }
+				
+				if (randomNumber == randomNumber2 && people.Count == 2)
+				{
+					if (randomNumber == 1) 
+					{
+						randomNumber2 = 0;
+					} 
+					if (randomNumber == 0) 
+					{
+						randomNumber2 = 1;
+					}
+ 				}
                 var person1 = people.ElementAt(randomNumber);
                 var person2 = people.ElementAt(randomNumber2);
                 people.Remove(person1);
