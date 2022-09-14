@@ -33,6 +33,40 @@ namespace CSharpDiscovery.Quest03
         {
             return ($"{Name} (Lat={Latitude}, Long={Longitude})");
         }
+        
+        public int GetDistance(PointOfInterest other)
+        {
+            double R = 6371;
+            double dLat = other.Latitude * Math.PI / 180;
+            double dLon = Latitude * Math.PI / 180;
+            
+            double allLat = (Latitude - other.Latitude) * Math.PI / 180;
+            double allLong = (Longitude - other.Longitude) * Math.PI / 180;
+
+            double a = Math.Sin(allLat / 2) * Math.Sin(allLat / 2) +
+                       Math.Cos(dLat) * Math.Cos(dLon) * Math.Sin(allLong / 2) * Math.Sin(allLong / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            double d = R * c;
+
+            return (int)d + 1;
+        }
+
+        public static int GetDistance(PointOfInterest p1, PointOfInterest p2)
+        {
+            double R = 6371;
+            double dLat = p1.Latitude * Math.PI / 180;
+            double dLon = p2.Latitude * Math.PI / 180;
+            
+            double allLat = (p2.Latitude - p1.Latitude) * Math.PI / 180;
+            double allLong = (p2.Longitude - p1.Longitude) * Math.PI / 180;
+
+            double a = Math.Sin(allLat / 2) * Math.Sin(allLat / 2) +
+                       Math.Cos(dLat) * Math.Cos(dLon) * Math.Sin(allLong / 2) * Math.Sin(allLong / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            double d = R * c;
+
+            return (int)d + 1;
+        }
     }
 }
 
