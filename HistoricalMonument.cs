@@ -19,8 +19,9 @@ namespace CSharpDiscovery.Quest03
             BuildYear = buildYear;
         }
 
-        public string ToString()
+        public override string ToString()
         {
+            base.ToString();
             return $"{Name} is a historical monument built in {BuildYear}";
         }
     }
