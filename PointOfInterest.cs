@@ -29,7 +29,7 @@ namespace CSharpDiscovery.Quest03
             return ($"https://www.google.com/maps/place/{Name.Replace(" ","+")}/@{Latitude},{Longitude},15z/");
         }
 
-        public virtual string ToString()
+        public override string ToString()
         {
             return ($"{Name} (Lat={Latitude}, Long={Longitude})");
         }

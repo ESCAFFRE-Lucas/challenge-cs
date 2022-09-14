@@ -6,7 +6,7 @@ namespace CSharpDiscovery.Quest03
     {
         public int Capacity { get; set; } = 0;
 
-        public string ToString()
+        public override string ToString()
         {
             return $"{Name} is a campus with a capacity of {Capacity} students";
         }

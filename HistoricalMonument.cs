@@ -5,8 +5,10 @@ namespace CSharpDiscovery.Quest03
     public class HistoricalMonument : PointOfInterest
     {
         public int BuildYear { get; set; } = 0;
-        
-        public HistoricalMonument(){}
+
+        public HistoricalMonument()
+        {
+        }
 
         public HistoricalMonument(string name, double latitude, double longitude, int buildYear)
         {
@@ -18,7 +20,6 @@ namespace CSharpDiscovery.Quest03
 
         public override string ToString()
         {
-            base.ToString();
             return $"{Name} is a historical monument built in {BuildYear}";
         }
     }
