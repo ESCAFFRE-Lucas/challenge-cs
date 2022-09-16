@@ -4,14 +4,14 @@ namespace CSharpDiscovery.Quest04
 {
     interface IThermalCar
     {
-        public int FuelLevel;
+        public int FuelLevel { get; set; }
         public void FillUp();
         public int GetFuelLevel();
     }
 
     interface IElectricCar
     {
-        public int BatteryLevel;
+        public int BatteryLevel { get; set; }
         public void Recharge();
         public int GetBatteryLevel();
     }
