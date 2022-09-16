@@ -10,7 +10,7 @@ namespace CSharpDiscovery.Quest04
 
         public int FuelLevel
         {
-            get { return 80; }
+            get { return 100; }
             set {}
         }
         
@@ -26,7 +26,7 @@ namespace CSharpDiscovery.Quest04
     
         public int BatteryLevel
         {
-            get { return 60; }
+            get { return 100; }
             set {}
         }
         
