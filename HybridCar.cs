@@ -32,7 +32,7 @@ namespace CSharpDiscovery.Quest04
         
         public int GetBatteryLevel()
         {
-            return BatteryLevel;
+            return BatteryLevel - 50;
         }
         
         public void Recharge()
