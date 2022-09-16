@@ -8,10 +8,12 @@ namespace CSharpDiscovery.Quest04
         
         public HybridCar(string model, string brand, string color, int currentSpeed = 0):base(model,brand,color,currentSpeed){}
 
+        private int _fuelLevel = 100;
+        private int _batteryLevel = 100;
         public int FuelLevel
         {
-            get { return 100; }
-            set {}
+            get { return _fuelLevel; }
+            set { _fuelLevel = value; }
         }
         
         public int GetFuelLevel()
@@ -26,13 +28,13 @@ namespace CSharpDiscovery.Quest04
     
         public int BatteryLevel
         {
-            get { return 100; }
-            set {}
+            get { return _batteryLevel; }
+            set { _batteryLevel = value; }
         }
         
         public int GetBatteryLevel()
         {
-            return BatteryLevel - 50;
+            return BatteryLevel;
         }
         
         public void Recharge()
