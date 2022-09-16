@@ -8,7 +8,8 @@ namespace CSharpDiscovery.Quest04
 
         public Car()
         {
-            string Brand = "Unknown";
+            Model = "Unknown";
+            Brand = "Unknown";
         }
 
         public Car(string model, string brand, string color, int currentSpeed = 0)
